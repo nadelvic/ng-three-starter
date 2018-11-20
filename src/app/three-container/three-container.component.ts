@@ -69,16 +69,15 @@ export class ThreeContainerComponent implements OnInit {
       x: 0,y:0
     }
 
-    // not use here no data is loaded.
+    /* not use here no data is loaded nor 3D files.
     Promise.all([
-      /*
+      
       WindLayer.getAssets(),
       TempLayer.getAssets(),
-
-      */
+      
     ]).then(() => {
       //this.displayThreeContent();
-    });
+    }); */
   }
   ngAfterViewInit() {
     //this.threeEntryPoint = new ThreeEntryPoint(this.canvas, this.winRef, this.animationService );
@@ -92,7 +91,6 @@ export class ThreeContainerComponent implements OnInit {
         //new GeneralLights(scene)
         //new SceneSubject(scene)
     ];
-  
     return sceneSubjects;
   }
 
@@ -150,10 +148,10 @@ export class ThreeContainerComponent implements OnInit {
     const clientX = event.clientX - rect.left;
     //mouse.clientX = (clientX / this.canvas.clientWidth) * 2 - 1;
     mouse.clientX = (clientX / rect.width)*2 - 1;
-    mouse.clientY = -(clientY / rect.height)*2 - 1;
+    mouse.clientY = (clientY / rect.height)*2 + 0;
     //mouse.clientY = (clientY / this.canvas.clientHeight)*2 - 1;
     //console.log(mouse.x+'|'+mouse.y);
-    //console.log();
+    //console.log(mouse);
     this.mouse.x = mouse.clientX;
     this.mouse.y = mouse.clientY;
     return mouse; 

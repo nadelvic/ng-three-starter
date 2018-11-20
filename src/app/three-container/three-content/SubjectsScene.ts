@@ -44,7 +44,7 @@ export class SubjectsScene extends Group {
         const r = 2;
         const a = 4;
         //return r * Math.cos(a * (j/surfaceSize + 0.5)) + r * Math.sin(a*(i/surfaceSize - 0.5));
-        return 1/110 * (-i*i - j*j) + 22;
+        return 1;//return 1/110 * (-i*i - j*j) + 22;
          
     }
 

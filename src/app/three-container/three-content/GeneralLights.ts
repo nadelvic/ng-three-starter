@@ -4,15 +4,16 @@ import { Group, Light, PointLight } from 'three';
 
 export class GeneralLights extends Group {
 
-    private lights: Array<Light> = new Array<Light>();
+    private lights: Array<Light>;
 
     constructor(){
         super();
+        this.lights = new Array<Light>();
         const firstLight = this.createPointLight("#FAFAFA",1,0,0,0);
-        //const secondLight = this.createPointLight("#0088FF",1, 2.0,2.0,2.0);
-        this.lights.forEach(light => super.add(light));
-        super.add(this.lights);
+        const secondLight = this.createPointLight("#0088FF",1, 2.0,2.0,2.0);
+        this.lights.forEach(light => super.add(light));  
     }
+
 
     createPointLight(
         hexaColor: string,
@@ -28,7 +29,6 @@ export class GeneralLights extends Group {
         this.lights.push(newLight);
         return newLight;
     }
-
 
 	update(time) {
 		//update1(time);

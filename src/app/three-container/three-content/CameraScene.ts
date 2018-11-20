@@ -11,7 +11,7 @@ export const CameraConfig = {
     // Distance between the looked point and the camera itself;
     distance: 45,
     // Default vertical (phi) angle from the Y AXIS (going up) of the position of the camera.
-    phi0: Math.PI * 92 / 180,
+    phi0: Math.PI * 90 / 180,
     // Range of movement along the  (phi) vertical angle.
     phiRange: Math.PI * 5 / 180,
     // Default horizontal angle
